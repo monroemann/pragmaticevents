@@ -1,0 +1,15 @@
+current directory: /mnt/c/users/findi/onedrive/coding/events/vender/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/local/bin/ruby -r ./siteconf20200213-10903-13s1etj.rb extconf.rb
+creating Makefile
+
+current directory: /mnt/c/users/findi/onedrive/coding/events/vender/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /mnt/c/users/findi/onedrive/coding/events/vender/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /mnt/c/users/findi/onedrive/coding/events/vender/bundle/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200213-10903-1hroiuj/skiptrace/internal

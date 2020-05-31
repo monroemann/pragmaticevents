@@ -1,0 +1,15 @@
+<header>
+	<h1>Registrations For <%= @event.name %></h1>
+</header>
+
+<div>
+	<ul>
+	<% if @registrations.any? %>
+		<% @registrations.each do |person| %>
+			<li><%= person.name %>: <%= person.event.name %></li>
+		<% end %>
+	<% else %>
+		<li>NO REGISTRATIONS</li>
+	<% end %>
+	</ul>
+</div>
