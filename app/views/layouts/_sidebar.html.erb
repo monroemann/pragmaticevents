@@ -3,8 +3,10 @@
         <ul>
           <%= link_to "All Events", events_path %>
         </ul>
+        <% if current_user_admin? %>
         <ul>
           <%= link_to "Add New Event", new_event_path %>
         </ul>
+        <% end %>
       </nav>
     </aside>

@@ -31,6 +31,7 @@
 	<%= register_link(@event) %>
 	
 </article>
-
-<%= link_to "Edit Event", edit_event_path %> |
-<%= link_to "Destroy Event", event_path(@event), method: :delete, data: {confirm: "Are you sure?"} %>
+<% if current_user_admin? %>
+	<%= link_to "Edit Event", edit_event_path %> |
+	<%= link_to "Destroy Event", event_path(@event), method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>
