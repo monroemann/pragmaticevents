@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_09_221246) do
+ActiveRecord::Schema.define(version: 2020_08_30_232002) do
 
   create_table "events", force: :cascade do |t|
     t.string "name"
@@ -24,13 +24,21 @@ ActiveRecord::Schema.define(version: 2020_08_09_221246) do
     t.integer "capacity", default: 1
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.integer "event_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_likes_on_event_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "registrations", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
     t.string "how_heard"
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
     t.index ["event_id"], name: "index_registrations_on_event_id"
   end
 

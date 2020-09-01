@@ -10,14 +10,6 @@
 		<fieldset>
 			<ol>
 				<li>
-					<%= f.label :name %>
-					<%= f.text_field :name, size: 40, autofocus: true %>
-				</li>
-				<li>
-					<%= f.label :email %>
-					<%= f.text_field :email, size: 40 %>
-				</li>
-				<li>
 					<%= f.label :how_heard %>
 					<%= f.select :how_heard, Registration::HOW_HEARD_OPTIONS, prompt: "Pick one" %>
 				</li>
