@@ -23,6 +23,7 @@
 			<%= f.label :starts_at %><br>
 			<%= f.datetime_select :starts_at %><br><br>
 
+			<%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>
 
 			<%= f.submit %> | 
 			<%= link_to 'Cancel', events_path %>

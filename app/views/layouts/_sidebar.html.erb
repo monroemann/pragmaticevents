@@ -1,7 +1,18 @@
     <aside id="side-bar">
       <nav>
         <ul>
-          <%= link_to "All Events", events_path %>
+          <li class="events">
+            <%= link_to "All Events", events_path %>
+          </li>
+          <li class="events">
+            <%= link_to "Past Events", filtered_events_path(:past) %>
+          </li>          
+          <li class="events">
+            <%= link_to "Free Events", filtered_events_path(:free) %>
+          </li>  
+          <li class="events">
+            <%= link_to "Recent Events", filtered_events_path(:recent) %>
+          </li>   
         </ul>
         <% if current_user_admin? %>
         <ul>
@@ -9,4 +20,7 @@
         </ul>
         <% end %>
       </nav>
+
+      <%= content_for(:side) %>
+
     </aside>

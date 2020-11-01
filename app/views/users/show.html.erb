@@ -1,4 +1,3 @@
-
 <article id="users">
 	<header>
 		<h1>
@@ -8,13 +7,15 @@
 			<%= @user.email %>
 		</h2>
 		
-		<% if @liked_events.any? %>
-		<ul>
-			<h2>Liked Events</h2>
-			<% @liked_events.each do |event| %>
-				<%= link_to event.name, event %>
-			<% end %>	
-		</ul>
+		<% content_for(:side) do %>
+			<% if @liked_events.any? %>
+			<ul>
+				<h2>Liked Events</h2>
+				<% @liked_events.each do |event| %>
+					<%= link_to event.name, event %>
+				<% end %>	
+			</ul>
+			<% end %>
 		<% end %>
 
 		<h2>Registrations</h2>
